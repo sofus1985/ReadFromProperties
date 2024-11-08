@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Sample test Suite">
+
+    <listeners>
+        <listener class-name="listeners.ExtentReporterNG" />
+    </listeners>
+
+    <test name = "Sample test">
+
+        <classes>
+            <class name = "com.qa.tc.GroupTest">
+                <methods>
+                    <include name="TestSignIn"/>
+                    <include name="testSecond"/>
+                    <exclude name="testFirst"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
