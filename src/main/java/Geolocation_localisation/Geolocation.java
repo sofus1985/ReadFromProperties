@@ -72,3 +72,19 @@ HasDevTools - An interface that allows a WebDriver instance to access DevTools.
 
 DevToolsSession - Represents a devtools session, which is used to send commands and receive events.
  */
+
+/*
+Emulation.setGeolocationOverride explain where come from
+The Emulation.setGeolocationOverride method comes from the Chrome DevTools Protocol (CDP), which allows you to interact with the browser at a lower level compared to standard WebDriver commands. This method specifically belongs to the emulation domain of CDP, enabling you to override the geolocation of the browser.
+
+In Selenium 4, you access these DevTools commands via the DevTools and Emulation classes provided by Selenium’s DevTools package. Here's a breakdown:
+
+Chrome DevTools Protocol (CDP)
+The Chrome DevTools Protocol is a set of tools to understand and tweak Chrome’s behavior. It includes the following domains:
+
+Emulation: Override device features like geolocation, sensors, and user-agent.
+
+Network: Inspect and manipulate network interactions.
+
+Performance: Measure and optimize performance.
+ */
