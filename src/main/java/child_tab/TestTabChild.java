@@ -1,9 +1,9 @@
-package tab_child;
+package child_tab;
 
 import Base.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import child_tab.TabChild;
+
 
 public class TestTabChild extends Base {
 

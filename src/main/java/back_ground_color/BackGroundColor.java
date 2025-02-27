@@ -18,15 +18,15 @@ public class BackGroundColor {
         driver.manage().deleteAllCookies();
         driver.get("https://example.cypress.io/commands/actions");
         Thread.sleep(5000);
-
+    // the color of surrounding box
         driver.findElement(By.xpath("//input[@id='fullName1']")).click();
         String rgbBackGroundColor =  driver.findElement(By.xpath("//input[@id='fullName1']")).getCssValue("background-color");
 
         System.out.println("this is teh color format rgb is :  " + rgbBackGroundColor);
-
+    // inside the box color
      Color color = Color.fromString(rgbBackGroundColor);
      String hexColor = color.asHex();
-      System.out.println();
+
       System.out.println("this is teh color format hex is :  " + hexColor);
 
     }

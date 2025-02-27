@@ -5,19 +5,23 @@ import Base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import java.util.Iterator;
 import java.util.Set;
 
 public class TabChild extends Base {
-  @FindBy(xpath = "//a[text()='Click Here']")
+
+    //https://www.docker.com
+
+  @FindBy(xpath = "//ul[@class='main-menu']//a[@class='button secondary'][normalize-space()='Sign In']")
   public WebElement clickButtON;
 
     public TabChild(){
         PageFactory.initElements(driver,this);
 
     }
-
+    @Test
     public void  childTab(){
    clickOnElement(clickButtON);
    String parentWindow = driver.getWindowHandle();

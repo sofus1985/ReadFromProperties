@@ -25,7 +25,7 @@ public class LoopingDropDown {
       Thread.sleep(5000);
 
       int adult = 1;
-      while (adult <5){
+      while (adult <4){
          driver.findElement(By.xpath("//button[@class='add plus_box1' and @id='add']")).click();
           adult ++;
 

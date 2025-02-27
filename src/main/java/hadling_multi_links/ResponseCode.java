@@ -21,7 +21,7 @@ public class ResponseCode {
         driver.manage().window().maximize();
         driver.get("https://rediff.com");
         // collect all the footer links in a list
-        List<WebElement> footerLinks = driver.findElements(By.xpath("//div[@class = 'footer alignC']/a"));
+        List<WebElement> footerLinks = driver.findElements(By.xpath("//div[@class = 'footer alignC wrapper']/a"));
         System.out.println("Total no of footer links are : " + footerLinks.size());
 
         for(int i=0 ; i<footerLinks.size() ; i++) {
@@ -46,7 +46,7 @@ public class ResponseCode {
             //driver.navigate().back();
             Thread.sleep(2000);
             //StaleElementReferenceException
-            footerLinks = driver.findElements(By.xpath("//div[@class = 'footer alignC']/a")); //call the list again
+            footerLinks = driver.findElements(By.xpath("//div[@class = 'footer alignC wrapper']/a")); //call the list again
             //the above statement will respect the for loop while activating the dormant or stale elements
             Thread.sleep(1000);
         }

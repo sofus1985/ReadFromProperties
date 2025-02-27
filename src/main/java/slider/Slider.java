@@ -18,7 +18,7 @@ public static WebDriver driver;
        driver.get("https://example.cypress.io/commands/actions");
         WebElement element = driver.findElement(By.xpath("//input[@class='trigger-input-range']"));
         Actions actions= new Actions(driver);
-        actions.dragAndDropBy(element,-30, 0).perform();
+        actions.dragAndDropBy(element,-30, 0).build().perform();
         Thread.sleep(5000);
        driver.quit();
     }

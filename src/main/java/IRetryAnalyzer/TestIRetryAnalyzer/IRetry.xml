@@ -1,0 +1,17 @@
+<suite name="All Test Suite" verbose="2">
+
+    <listeners>
+        <listener class-name="IRetryAnalyzer.MyTransformer"/>
+    </listeners>
+
+    <test name="TestIRetryAnalyzer">
+        <classes>
+            <class name="IRetryAnalyzer.TestIRetryAnalyzer.TestRetry">
+
+                <include name="test4"/>
+                <include name="test5"/>
+                <include name="test6"/>
+            </class>
+        </classes>
+    </test>
+</suite>

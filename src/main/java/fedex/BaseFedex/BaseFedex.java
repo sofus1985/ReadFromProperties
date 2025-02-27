@@ -1,4 +1,4 @@
-package Base;
+package fedex.BaseFedex;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +22,7 @@ import java.time.Duration;
 import java.util.Arrays;
 
 
-public class Base {
+public class BaseFedex {
     public  static WebDriver driver;
     public static ChromeOptions chromeOptions;
     public  static FirefoxOptions firefoxOptions;
@@ -33,7 +33,7 @@ public class Base {
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("https://the-internet.herokuapp.com/windows/new") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("https://www.fedex.com/en-us/home.html") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
@@ -53,7 +53,7 @@ public class Base {
     private static void driverInit(String browser) {
         chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addArguments("--incognito");
+        //chromeOptions.addArguments("--incognito");
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation", "disable-infoBars"));
 

@@ -6,7 +6,7 @@ public class CallStudent {
 
         Student student = new Student();
 
-        System.out.println(student.getAge());
+        System.out.println("the age of the student is =" + student.getAge());
     }
 
 }
