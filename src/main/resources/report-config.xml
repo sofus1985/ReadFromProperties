@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extentreports>
     <configuration>
-        <!-- report theme -->
-        <!-- standard, dark -->
-        <theme>dark</theme>
+        <!-- Report Theme -->
+        <theme>dark</theme> <!-- Options: standard, dark -->
 
-        <!-- document encoding -->
-        <!-- defaults to UTF-8 -->
+        <!-- Document Encoding -->
         <encoding>UTF-8</encoding>
 
-        <!-- protocol for script and stylesheets -->
-        <!-- defaults to https -->
+        <!-- Protocol for script and stylesheets -->
         <protocol>https</protocol>
 
-        <!-- title of the document -->
-        <documentTitle>Extent Report</documentTitle>
+        <!-- Report Title -->
+        <documentTitle>Extent Automation Report</documentTitle>
 
-        <!-- report name - displayed at top-nav -->
-        <reportName>Automation Report</reportName>
+        <!-- Report Name (displayed in the top navigation bar) -->
+        <reportName>Test Execution Report</reportName>
 
-        <!-- location of charts in the test view -->
-        <!-- top, bottom -->
-        <testViewChartLocation>top</testViewChartLocation>
+        <!-- Chart Location in Test View -->
+        <testViewChartLocation>top</testViewChartLocation> <!-- Options: top, bottom -->
 
-        <!-- custom javascript -->
+        <!-- Enable or Disable TimeStamp in Report -->
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+
+        <!-- Add system or environment details in the report -->
+        <systemInfo>
+            <param name="OS" value="Windows 11"/>
+            <param name="Browser" value="Chrome"/>
+            <param name="Executed By" value="Sofiane"/>
+        </systemInfo>
+
+        <!-- Log view order (newestFirst or oldestFirst) -->
+        <logViewOrder>newestFirst</logViewOrder>
+
+        <!-- Enable or Disable Offline Mode (use local resources) -->
+        <offlineMode>true</offlineMode>
+
+        <!-- Custom JavaScript -->
         <scripts>
             <![CDATA[
                 $(document).ready(function() {
-
+                    console.log("Extent Report Loaded Successfully");
                 });
             ]]>
         </scripts>
 
-        <!-- custom styles -->
+        <!-- Custom CSS Styles -->
         <styles>
             <![CDATA[
-
+                .report-name { color: #00ffcc !important; font-size: 24px; }
+                .nav-logo { content: url('your-logo-url.png'); width: 150px; }
             ]]>
         </styles>
     </configuration>
